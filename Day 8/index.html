@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Register Form</title>
+</head>
+<body>
+    <div class="background">
+        <div class="form">
+            <form action="" class="form-control" autocomplete="off">
+
+                <p class="heading">Register</p>
+                <div class="input-wrapper">
+                    <input type="text" name="" id="input-name" placeholder="Username" class="">
+                    <span></span>
+                    <small class="name-message message"></small>
+                </div>
+                
+                <div class="input-wrapper">
+                    <input type="email" name="" id="input-email" placeholder="Email" class="">
+                    <span ></span>
+                    <small class="email-message message"></small>
+                </div>
+
+                <div class="input-wrapper">
+                    <div class="password-wrapper">
+                        <input type="password" name="" id="input-password" placeholder="Password" class="">
+                        <i class="fa-solid fa-eye show"></i>
+                        <i class="fa-solid fa-eye-slash hide"></i>
+                    </div>
+                    <span></span>
+                    <small class="password-message message"></small>
+
+                </div>
+
+                <div class="input-wrapper">
+                    <div class="password-wrapper">
+                        <input type="password" name="" id="input-confirm-password" placeholder="Confirm Password" class="">
+                        <i class="fa-solid fa-eye show"></i>
+                        <i class="fa-solid fa-eye-slash hide"></i>
+                    </div>
+                    <span></span>
+                    <small class="password-confirm-message message"></small>
+                </div>
+
+
+                <button onclick="onCheck()">Login</button>
+            </form>
+
+            <div class="footer">
+                <p>Not a member?  <a href="#"> Signup</a> </p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>

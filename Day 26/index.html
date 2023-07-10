@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validator Password</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <form class="form">
+        <div class="input-section">
+          <div class="input">
+            <input type="password" />
+            <div class="psw">
+              <div class="state">
+                <i class="fa-solid fa-eye-slash"></i>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn">Submit</button>
+        </div>
+        <div class="req-sec">
+          <ul class="req-list">
+            <li class="req">
+              <div class="state"><i class="fa-solid fa-xmark"></i></div>
+              <p>Lower-case</p>
+            </li>
+            <li class="req">
+              <div class="state"><i class="fa-solid fa-xmark"></i></div>
+              <p>Upper-case</p>
+            </li>
+            <li class="req">
+              <div class="state"><i class="fa-solid fa-xmark"></i></div>
+              <p>Number</p>
+            </li>
+            <li class="req">
+              <div class="state"><i class="fa-solid fa-xmark"></i></div>
+              <p>At least one special symbol</p>
+            </li>
+            <li class="req">
+              <div class="state"><i class="fa-solid fa-xmark"></i></div>
+              <p>At least 8 characters</p>
+            </li>
+          </ul>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script src="./main.js" defer></script>
+</html>

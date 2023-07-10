@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css.css">
+    <title>Custom Range Slider</title>
+</head>
+<body>
+    <div class="background">
+        <div class="content" style = "opacity: 1 !important;">
+            <h4>Custom Range Slider</h4>
+            <div class="slider-bar" id="slider-bar">
+                <div class="slider">
+                    <span class = "percentage">50%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./script.js"></script>
+<script>
+    var getSliderBar = document.getElementById("slider-bar");
+    var getSlider = document.querySelector(".slider")
+    var getPercentage = document.querySelector(".percentage");
+    var getBackground = document.querySelector(".background");
+    var getText = document.querySelector(".content h4")
+    var getPercentageText = document.querySelector(".percentage")
+
+    getSliderBar.addEventListener('mousemove', function(e) {
+        const process = e.pageX - this.offsetLeft + 5
+        let percentage = Math.round((process / this.offsetWidth) * 100)
+        if (percentage > 100) {
+            percentage = 100
+        }
+
+        if(percentage < 50 ) {
+            getText.style.color = `rgba(0, 0, 0, ${1 - (percentage / 100)})`
+            getPercentageText.style.color = `rgba(0, 0, 0, ${1 - (percentage / 100)})`
+        } else {
+            getText.style.color = `rgba(255, 255, 255, ${(percentage / 100)})`
+            getPercentageText.style.color = `rgba(255, 255, 255, ${(percentage / 100)})`
+        }
+
+        getBackground.style.backgroundColor = `rgba(0, 0, 0, ${percentage / 100})`
+        getSlider.style.width = percentage > 100 ? 100 + "%" : percentage + "%"
+        getPercentage.textContent = percentage > 100 ? 100 + "%" : percentage + "%"
+
+    })
+</script>
+</html>

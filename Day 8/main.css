@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Poppins", sans-serif;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(120deg, #3ca7ee, #9b408f);
+}
+
+.form {
+    background-color: white;
+    padding: 20px 20px;
+    border-radius: 15px;
+    width: 400px;
+}
+.form-control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 12px;
+}
+
+
+.form-control input {
+    font-family: "Poppins", sans-serif;
+    border: none;
+    padding: 10px 12px 5px 6px;
+    border-bottom: 1px solid #ccc;
+    outline: 0;
+    width: 100%;
+    font-size: 16px;
+}
+
+
+span {
+    display: block;
+    width: 0%;
+    background-color: #2691d9;
+    height: 2px;
+    align-self: start;
+    transform: translateY(-2px);
+	transition: 0.3s;
+}
+
+.form-control input:focus + span{
+    width: 100%;
+}
+.form-control input:focus ::before {
+    width: 100%;
+    transition: .3s;
+}
+.form-control button {
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    padding: 12px 12px;
+    margin: 15px;
+    background-color: #3ca7ee;
+    border: none;
+    color: white;
+    border-radius: 25px;
+}
+
+.form-control button:hover {
+    cursor: pointer;
+    background-color: #2691d9;
+}
+
+.form-control p {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+}
+
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #3ca7ee;
+}
+
+
+
+.message {
+    align-self: start;
+    transform: translateY(-45px);
+    padding-left: 6px;
+    margin-bottom: -25px;
+}
+
+.message.error {
+    color: red;
+}
+
+.input-wrapper{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-wrapper i {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+
+.hide.active {
+    color: transparent;
+}

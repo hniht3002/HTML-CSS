@@ -1,0 +1,95 @@
+:root {
+  --color: #48735f;
+}
+html {
+  padding: 0;
+  margin: 0;
+}
+ul {
+  list-style: none;
+}
+
+body {
+  font-size: 16px;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  background-image: linear-gradient(145deg, #569377 50%, #dbede5 50%);
+  height: 100vh;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.form {
+}
+
+.input-section {
+  display: flex;
+}
+
+.input-section input {
+  width: 272px;
+  padding: 10px 0;
+  padding-left: 20px;
+  padding-right: 40px;
+  font-style: 20px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+}
+
+.input-section > .input {
+  position: relative;
+}
+
+.btn {
+  padding: 10px 20px;
+  margin-left: 10px;
+  border-radius: 10px;
+  background-color: var(--color);
+  font-weight: 600;
+  color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.req-sec {
+  background-color: var(--color);
+  width: 100%;
+  border-radius: 10px;
+}
+
+.req {
+  display: flex;
+  color: white;
+  align-items: center;
+  line-height: 12px;
+}
+
+.req > p {
+  margin-left: 20px;
+}
+
+.psw {
+  cursor: pointer;
+  position: absolute;
+  right: 9px;
+  top: 32%;
+}
+
+.req > .show {
+  display: block;
+}
+
+.req > .hide {
+  display: none;
+}
+
+.done {
+  color: rgba(255, 255, 255, 0.5);
+}

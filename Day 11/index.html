@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toast Notification</title>
+    <link rel="stylesheet" href="./style.css">
+    <link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+			integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="button">
+            <button class="success" >Show Success</button>
+            <button class="warning">Show Warning</button>
+            <button class="error">Show Error</button>
+        </div>
+
+        <div class="toast">
+            
+        </div>
+    </div>
+</body>
+
+<script>
+
+    const toasts = {
+        success: {
+            icon: '<i class="fas fa-check-circle"></i>',
+            msg: 'This is a success message !',
+        },
+        error: {
+            icon: '<i class="fas fa-exclamation-triangle"></i>',
+            msg: 'This is an error message !',
+        },
+        warning: {
+            icon: '<i class="fas fa-exclamation-circle"></i>',
+            msg: 'This is a warning message !',
+        },
+    }
+
+    var getBtns = document.querySelectorAll("button")
+    var getToast = document.querySelector(".toast")
+
+    getBtns.forEach((btn) => {
+        
+        btn.addEventListener("click", () => {
+            renderToast(btn.classList.value)
+        })
+    })
+
+    const renderToast = (status) => {
+        const createToastWrapper = document.createElement("div")
+        createToastWrapper.classList.add(status)
+        createToastWrapper.classList.add("style")
+        const toastHTML = `
+            ${toasts[status].icon}
+            <p>${toasts[status].msg}</p>
+        `
+        createToastWrapper.innerHTML = toastHTML
+        getToast.appendChild(createToastWrapper)
+
+        
+        //add moveOut effect to toast
+        setTimeout(function(){
+            createToastWrapper.style.animation = "moveOut 1s ease forwards"
+        }, 3900)
+        //remove toast
+        setTimeout(function(){
+            createToastWrapper.remove()
+        }, 6000)
+    }
+
+
+</script>
+</html>

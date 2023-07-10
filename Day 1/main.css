@@ -1,0 +1,234 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Poppins", sans-serif;
+}
+
+.background-color{
+    background-image: linear-gradient(to right, #4daf54, #3d8880);
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.card {
+    margin: 120px auto;
+    width: 320px;
+    height: 400px;
+    background-color: #272d40;
+    border-radius: 15px;
+    padding: 40px 20px;
+    color: white;
+    position: relative;
+    
+}
+
+.like {
+    float: left;
+    position: absolute;
+    top: 20px;
+    cursor: pointer;
+    transition: all 0.25s;
+    z-index: 1;
+}
+
+
+.like.liked {
+    color: red
+}
+
+.like i {
+    font-size: 20px;
+}
+.cart {
+    float: right;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 0.25s;
+
+}
+
+.cart.added {
+    color:rgb(0, 255, 174);
+    transition: all 0.25s;
+}
+
+.cart i {
+    font-size: 20px;
+}
+
+.img {
+    width: 90%;
+    transition: .5s;
+
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+    transition: .5s;
+
+}
+
+.name {
+    font-size: 24px;
+    color: #4daf54;
+    text-align: center;
+    transition: .5s;
+}
+
+.price {
+    color: white;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+    transition: .5s;
+}
+
+
+
+.size {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.size-numb {
+    display: block;
+    padding: 2px 10px;
+    margin: 0 10px;
+    font-size: 16px;
+    color: black;
+    background-color: #DADADA;
+    border-radius: 5px;
+    transition: all .25s ease;
+
+}
+
+.size-numb:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px 1px white;
+    transition: all .25s ease;
+}
+
+.size-numb.active {
+    color: red;
+}
+
+
+.color {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.color h3 {
+    margin-right: 5px;
+}
+
+.color span {
+    display: block;
+    margin: 0 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.black {
+    background-color: black;
+}
+
+.color-options.active {
+    cursor: pointer;
+    box-shadow: 0 0 10px 1px white;
+    transition: all .25s ease;
+}
+
+.btn {
+
+}
+
+.btn button {
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    background-color: #4daf54;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    margin-right: 7px;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+
+.btn button:hover {
+    transform: scale(0.9);
+}
+
+.color span:hover {
+    cursor: pointer;
+    box-shadow: 0 0 1px 1px white;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.card:hover .img {
+    transform:translateY(-90px) rotate(-20deg);
+    transition: 0.5s;
+}
+
+.card:hover .name {
+    transform: translateY(-90px) translateX(-45px);
+    transition: 0.5s;
+
+}
+
+.card:hover .price {
+    transform: translateY(-90px) translateX(-115px);
+    transition: 0.5s;
+
+}
+
+
+.onhover {
+    transform: translateY(150px);
+    display: block;
+    transition:  transform 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+
+.card:hover .onhover {
+    display: block;
+    transform: translateY(-50px);
+    transition:  transform 0.5s;
+    opacity: unset;
+    visibility: unset;
+    transition: 0.5s;
+    transition-delay: .25s;
+
+}

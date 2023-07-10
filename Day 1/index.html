@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./main.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+    <title>Product Card</title>
+</head>
+<body>
+    <div class="background-color">
+        <div class="card">
+            <div class="like">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+
+            <div class="cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+
+            
+            <div class="img">
+                <img src="https://www.nodemy.vn/projects/html-css-js/product-card/Nike%20Zoom%20KD%2012.png" alt="">
+            </div>
+            <h4 class="name">Nike Zoom KD 12</h4>
+            <p class="price">$99</p>
+            <div class="onhover">
+                <div class="size">
+                    <h3 >Size:</h3>
+                    <span class="size-numb">6</span>
+                    <span class="size-numb">7</span>
+                    <span class="size-numb">8</span>
+                    <span class="size-numb">9</span>
+                </div>
+
+                <div class="color">
+                    <h3>Color: </h3>
+                    <span class = "green color-options"></span>
+                    <span class = "red color-options"></span>
+                    <span class = "black color-options"></span>
+                </div>
+
+                <div class="btn">
+                    <button>Buy Now</button>
+                    <button class="cart-btn">Add cart</button>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</body>
+
+<script>
+    var getLikeBtn = document.querySelector('.like')
+    getLikeBtn.addEventListener('click', function (){
+        getLikeBtn.classList.toggle('liked')
+    })
+
+    var getCartIcon = document.querySelector('.cart')
+    var getCartBtn = document.querySelector('.cart-btn')
+
+    addToCart(getCartBtn)
+    addToCart(getCartIcon)
+
+
+    function addToCart(arr) {
+        arr.addEventListener('click', function (){
+            getCartIcon.classList.toggle('added')
+    })
+    }
+    
+
+    var getSizeNumb = document.querySelectorAll('.size-numb')
+    var getColor = document.querySelectorAll('.color-options')
+
+    selectionLogic(getSizeNumb)
+    selectionLogic(getColor)
+
+
+
+    function selectionLogic(arr){
+        arrLength = arr.length
+        arr.forEach(function(item, index){
+        item.onclick = function(){
+            item.classList.toggle('active')
+
+            for (var i = 0; i <= arrLength; i++) {
+                if (i != index) {
+                    if(arr[i].classList.contains('active')){
+                        arr[i].classList.remove('active')
+                    }
+                }
+            }
+        }
+    })
+    }
+
+
+</script>
+</html>

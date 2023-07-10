@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif
+}
+
+.background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.app-wrapper{
+    max-width: 400px;
+    max-height: 600px;
+    width: 400px;
+    height: 600px;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.app-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-image: url("https://www.nodemy.vn/projects/html-css-js/weather-app/hot.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.app-header {
+    padding: 30px 20px 0 20px;
+}
+.input-bar {
+    font-size: 20px;
+    width: 100%;
+    padding: 12px 8px 12px 24px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    outline: 0;
+    border: none;
+    box-shadow: 0 5px 4px rgb(0 0 0 / 20%);
+    transition: .5s ease;
+    opacity: .4;
+}
+.input-bar:focus {
+    border-bottom-right-radius: 25px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    transition: .5s ease;
+    opacity: 1;
+}
+
+.app-content {
+    padding: 0 20px;
+}
+
+.heading-content,
+.body-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+
+}
+
+.heading-content .name {
+    padding-top: 30px;
+    padding-bottom: 12px;
+    font-size: 30px;
+    text-shadow: 2px 2px rgb(0 0 0 / 50%);
+}
+
+
+.body-content {
+    
+}
+
+.temperature {
+    font-size: 70px;
+    font-weight: 900;
+    padding-top: 30px;
+    text-shadow: 2px 2px rgb(0 0 0 / 50%);
+}
+
+.weather {
+    font-size: 30px;
+    font-weight: 900;
+    text-shadow: 2px 2px rgb(0 0 0 / 50%);
+    padding-top: 20px;
+}
+
+
+.more-desc{
+    display: flex;
+    color: white;
+    justify-content: space-around;
+    padding-top: 50px;
+}
+
+.desc-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 18px;
+}
+
+.desc-item p{
+    padding-top: 20px;
+}

@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Poppins", sans-serif;
+}
+:root {
+
+    --main-c: #8CC84C
+}
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--main-c);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    background-color: white;
+    width: 500px;
+    border-radius: 10px;
+}
+
+.box .heading p {
+    color: black;
+    padding: 20px;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+
+.box .footer button {
+    margin: 20px;
+    color: white;
+    padding: 13px 20px;
+    background-color: var(--main-c);
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+.tag {
+    color: white;
+    padding: 10px;
+    background-color: var(--main-c);
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 12px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.value {
+    padding-right: 12px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag {
+    margin-bottom: 10px;
+}
+
+.content {
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 2px solid #888;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.content-wrapper {
+    padding: 20px;
+}
+
+.input {
+    font-size: 20px;
+    background-color: white;
+    padding: 10px 15px 0 0;
+    color: black;
+    width: 100%;
+    border: none;
+}
+
+.input:focus{
+    border: none;
+    outline: none;
+}
+
+.removeAll {
+    cursor: pointer;
+}
